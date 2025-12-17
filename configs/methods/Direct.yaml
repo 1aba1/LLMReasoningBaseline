@@ -1,0 +1,10 @@
+#! Direct 范式的方法配置
+#
+#! 约定：
+#! - 本方法默认使用 data/prompts/Direct_prompt.txt 作为提示模板
+#! - 顶层 configs/config.yaml 可以通过 ${methods.prompt_file} 自动引用这里的路径
+
+method_name: Direct
+
+# 与该推理范式绑定的提示词文件（相对于项目根目录）
+prompt_file: "data/prompts/Direct_prompt.txt"

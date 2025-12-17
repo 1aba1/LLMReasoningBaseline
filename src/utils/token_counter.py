@@ -1,4 +1,5 @@
-"""Token 统计工具（占位，当前主要依赖模型返回的 usage）。
+"""Token 统计工具（用于本地大模型token统计，闭源大模型主要依赖模型返回的 usage）。
+通过usages统计一个样例所消耗的token openai_client.py由openai实现了token使用数量统计，对于闭源模型，需要自己实现
 
 说明：
 - 很多 LLM API（包括 OpenAI）都会在返回结果里包含 token 使用情况（usage 字段），
@@ -6,11 +7,7 @@
 - 如果你后续使用的是本地模型，或者自建服务没有返回 usage，
   可以在这里接入第三方库（如 tiktoken）来估算 token 数。
 """
-
-from __future__ import annotations
-
 from typing import Iterable
-
 
 def sum_tokens(usages: Iterable[dict]) -> dict:
   """对一组 usage 字典求和，得到总的 token 统计。

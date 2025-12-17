@@ -1,7 +1,0 @@
-# 模型配置：OpenAI / 兼容 OpenAI 的闭源 / 开源服务
-
-model_type: openai          # 模型类型（目前仅实现 openai 一种，后续可扩展）
-model_name: gpt-4o-mini     # 模型名称，对应 API 的 model 字段
-base_url: https://api.openai.com/v1  # 从环境变量读取，如果为空则使用 openai 默认
-max_tokens: 512
-temperature: 0.0

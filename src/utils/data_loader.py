@@ -1,7 +1,4 @@
-"""数据加载工具：读取 JSON 数据集。"""
-
-from __future__ import annotations
-
+"""数据加载工具：按照最大样本数读取 JSON 数据集。"""
 import json
 from typing import List, Dict, Any, Optional
 
