@@ -1,0 +1,12 @@
+{
+  "run_name": "demo_direct_run",
+  "method": "direct",
+  "model": "gpt-4o-mini",
+  "num_samples": 2,
+  "accuracy": 1.0,
+  "token_usage": {
+    "prompt_tokens": 275,
+    "completion_tokens": 2,
+    "total_tokens": 277
+  }
+}

@@ -1,0 +1,16 @@
+# 运行总配置：选择模型、方法、数据集、提示词等
+
+run_name: "demo_direct_run"   # 本次实验的名字（会体现在输出文件夹名字中）
+
+model_config: "configs/models/openai_gpt4o.yaml"
+method_config: "configs/methods/direct.yaml"
+
+# 数据与提示词
+input_file: "data/inputs/math_test_sample.json"   # 待评估的数据集
+prompt_file: "data/prompts/direct_prompt.txt"     # Direct 方法使用的提示词模板
+
+# 输出目录（程序会在其中再创建时间戳子目录）
+output_dir: "data/outputs"
+
+# 其它选项
+max_samples: 1   # 设为数字可以只跑前 N 条，用于快速测试；null 表示全部
