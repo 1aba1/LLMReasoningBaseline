@@ -1,0 +1,14 @@
+{
+  "run_name": "",
+  "method": "Debate",
+  "data_file": "data/inputs/math_test_sample.json",
+  "model supplier": "openrouter",
+  "model_name": "openai/gpt-4.1-mini",
+  "num_samples": 2,
+  "accuracy": 1.0,
+  "total_token_usage": {
+    "prompt_tokens": 4263,
+    "completion_tokens": 1521,
+    "total_tokens": 5784
+  }
+}

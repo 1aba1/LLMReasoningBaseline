@@ -1,0 +1,9 @@
+#! 多智能体辩论范式的方法配置
+#! - 默认绑定 data/prompts/Debate_prompt.txt 作为提示模板
+#! - 顶层 configs/config.yaml 可通过 ${methods.prompt_file} 引用
+
+method_name: Debate
+
+# 与该推理范式绑定的提示词文件（相对于项目根目录）
+prompt_file: "data/prompts/Debate_prompt.txt"
+

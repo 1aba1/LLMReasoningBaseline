@@ -1,0 +1,14 @@
+{
+  "run_name": "",
+  "method": "CoT",
+  "data_file": "data/inputs/math_test_sample.json",
+  "model supplier": "openrouter",
+  "model_name": "openai/gpt-4.1-mini",
+  "num_samples": 2,
+  "accuracy": 1.0,
+  "total_token_usage": {
+    "prompt_tokens": 402,
+    "completion_tokens": 1648,
+    "total_tokens": 2050
+  }
+}

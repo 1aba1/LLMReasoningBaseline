@@ -1,0 +1,16 @@
+models:
+  model_type: openrouter
+  model_name: openai/gpt-4.1-mini
+  base_url: https://openrouter.ai/api/v1
+  api_key_env: OPENROUTER_API_KEY
+  max_tokens: 2048
+  temperature: 0.0
+methods:
+  method_name: Direct
+  prompt_file: data/prompts/Direct_prompt.txt
+run_name: ''
+filename: math_test_sample
+input_file: data/inputs/${filename}.json
+prompt_file: ${methods.prompt_file}
+output_dir: data/outputs
+max_samples: 2

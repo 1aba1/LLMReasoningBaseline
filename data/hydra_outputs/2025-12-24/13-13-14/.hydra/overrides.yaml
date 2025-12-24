@@ -1,0 +1,5 @@
+- methods=CoT
+- filename=math_test_sample
+- models=openrouter
+- models.model_name=openai/gpt-4.1-mini
+- max_samples=2

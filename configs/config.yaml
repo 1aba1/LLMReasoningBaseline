@@ -1,0 +1,32 @@
+# 顶层 Hydra 配置：选择模型、方法、数据集等
+#defaults 里的 - xxx: yyy 本质是：“我要自动引入另一个配置文件作为基础配置”
+#以下参数都可以通过命令行在程序运行前配置
+
+
+defaults:
+  # 对应 configs/models/openai.yaml
+  - models: openai
+  # 对应 configs/methods/Direct.yaml
+  - methods: Direct
+  - _self_
+
+hydra:
+  run:
+    # 自定义 Hydra 输出根目录（所有运行的 .hydra 都放这里）
+    dir: "data/hydra_outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}"
+
+# 本次实验的名字（会体现在输出文件夹名字中）
+run_name: ""
+
+# 数据与提示词（相对于项目根目录）
+filename: "math_test_sample"
+input_file: "data/inputs/${filename}.json"
+prompt_file: ${methods.prompt_file}
+
+# 输出目录（程序会在其中再创建时间戳子目录）
+output_dir: "data/outputs"
+
+# 其它选项
+# 设为数字可以只跑前 N 条，用于快速测试；null 表示全部
+max_samples: 2
+

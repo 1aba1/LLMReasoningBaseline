@@ -1,0 +1,25 @@
+你将参与一个三角色的数学选择题多智能体辩论，角色之间共享上下文并迭代改进。当前你扮演的身份与目标：
+- <role>{role_name}</role>
+- 角色目标：{role_goal}
+
+题目如下（包含选项）： 
+{question}
+
+历史辩论记录（按时间顺序）：
+{debate_history}
+
+输出要求（XML 风格标签，便于解析）：
+1) 必须包含 <role>、<thought>、<argument> 标签；可选 <critique>。
+2) 只有在确信答案时（通常由 Judge 角色），使用 <final_answer> 仅填入单个大写字母 A/B/C/D。
+3) 若暂不下结论，请提出下一步推理重点或需要他人回应的质疑。
+4) 回复要简洁聚焦于关键信息。
+
+示例框架（可按需增减标签，但必须成对闭合）：
+<role>{role_name}</role>
+<thought>...</thought>
+<argument>...</argument>
+<critique>...(若有)</critique>
+<final_answer>...(若已确定，填 A/B/C/D)</final_answer>
+
+请基于历史继续，不要重复已经出现的推理；若历史为空，请从解析题意开始。
+
