@@ -15,5 +15,5 @@
 python main.py \
 methods=direct \
 filename="math_test_sample" \
-models=openai \
-models.model_name="gpt-4o-mini" \
+models=openrouter \
+models.model_name="deepseek/deepseek-v3.2" \
